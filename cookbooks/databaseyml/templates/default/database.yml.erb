@@ -1,0 +1,6 @@
+<%= @node[:environment][:framework_env] %>:
+  adapter:   mysql
+  database:  <%= @app_name %>_<%= @node[:environment][:framework_env] %>
+  username:  <%= @app_name %>
+  password:  <%= @db_pass %>
+  host:      <%= @node[:db_host] %>
