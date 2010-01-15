@@ -8,7 +8,7 @@ node[:applications].each do |app_name,data|
   user = node[:users].first
   db_name = "#{app_name}_#{node[:environment][:framework_env]}"
   
-  template "/data/#{app_name}/shared/config/database.yml" do
+  template "/data/#{app_name}/shared/config/keep.database.yml" do
     source "database.yml.erb"
     owner user[:username]
     group user[:username]
